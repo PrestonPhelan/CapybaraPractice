@@ -8,9 +8,9 @@ class SessionsController < ApplicationController
     @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
     if @user
       login(@user)
-      #redirect
+      redirect_to goals_url
     else
-      flash.now[:errors] = ["invalid login!2"]
+      flash.now[:errors] = ["invalid login!"]
       render :new
     end
   end

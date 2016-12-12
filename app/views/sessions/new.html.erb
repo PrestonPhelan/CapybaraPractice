@@ -1,7 +1,7 @@
-New User
+Sign In!
 
 
-<form action="<%= users_url %>" method="post">
+<form action="<%= session_url %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
   <label>Username
@@ -12,6 +12,6 @@ New User
     <input type="password" name="user[password]" value="">
   </label>
 
-  <input type="submit" name="" value="Create User">
+  <input type="submit" name="" value="Sign In">
 
 </form>

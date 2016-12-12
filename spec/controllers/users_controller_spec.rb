@@ -14,7 +14,7 @@ RSpec.describe UsersController, type: :controller do
     context "with valid params" do
       it "redirects to somewhere" do
         post :create, user:{ username: "matt", password: "123456" }
-        expect(response).to redirect_to(new_session_url)
+        expect(response).to redirect_to(goals_url)
       end
     end
 
