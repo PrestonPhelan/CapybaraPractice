@@ -5,9 +5,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  resources :users, only: [:create, :new]
+  resources :users, only: [:create, :new, :show] do
+    resources :goals, only: :index
+  end
   resource :session, only: [:create, :new, :destroy]
-  resources :goals
+
+  resources :goals, only: [:create, :new, :show, :edit, :update, :destroy] 
 
 
 

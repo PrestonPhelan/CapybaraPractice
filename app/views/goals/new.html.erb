@@ -1,0 +1,11 @@
+<br>Add Goal
+
+<form class="" action="<%= goals_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="Goal">Goal
+    <input type="text" name="goal[goal_name]" value="">
+  </label>
+
+  <input type="submit" name="" value="Add Goal">
+</form>

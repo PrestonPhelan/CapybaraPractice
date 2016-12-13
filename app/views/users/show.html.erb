@@ -1,0 +1,13 @@
+<% if @user.goals %>
+<% @user.goals.each do |goal| %>
+  <% if !goal.priv || @user == current_user %>
+<%= link_to goal.goal_name, goal_url(goal) %>: <% if goal.complete %>
+Completed!
+<% else %>
+<%=  button_to "Complete!", user_url(@user) %> <%= button_to "Update Goal", edit_goal_url(goal) %>
+<% end %>
+<% end %>
+<% end %>
+<% end %>
+
+<%= link_to "Add Goal", new_goal_url %>

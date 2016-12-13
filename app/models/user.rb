@@ -6,6 +6,10 @@ class User < ActiveRecord::Base
 
   attr_reader :password
 
+  has_many :goals
+  has_many :comments
+  has_many :user_comments
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil if user.nil?

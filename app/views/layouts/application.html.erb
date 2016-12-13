@@ -13,6 +13,8 @@
   <%= link_to 'Sign Out', session_url, method: :delete %>
   <% end %>
 
+  <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
+
 
 <%= yield %>
 
